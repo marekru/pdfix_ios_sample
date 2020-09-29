@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		1A7ED41A251A159B00621779 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ED419251A159B00621779 /* AppDelegate.m */; };
 		1A7ED41D251A159B00621779 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ED41C251A159B00621779 /* SceneDelegate.m */; };
-		1A7ED420251A159B00621779 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ED41F251A159B00621779 /* ViewController.m */; };
+		1A7ED420251A159B00621779 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ED41F251A159B00621779 /* ViewController.mm */; };
 		1A7ED423251A159B00621779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7ED421251A159B00621779 /* Main.storyboard */; };
 		1A7ED425251A159B00621779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7ED424251A159B00621779 /* Assets.xcassets */; };
 		1A7ED428251A159B00621779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7ED426251A159B00621779 /* LaunchScreen.storyboard */; };
 		1A7ED42B251A159B00621779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ED42A251A159B00621779 /* main.m */; };
+		1A8C6210252357AA0042CEF4 /* libpdfix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8C620F252357AA0042CEF4 /* libpdfix.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,12 +24,14 @@
 		1A7ED41B251A159B00621779 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		1A7ED41C251A159B00621779 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		1A7ED41E251A159B00621779 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1A7ED41F251A159B00621779 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1A7ED41F251A159B00621779 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		1A7ED422251A159B00621779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A7ED424251A159B00621779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A7ED427251A159B00621779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A7ED429251A159B00621779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7ED42A251A159B00621779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A8C620F252357AA0042CEF4 /* libpdfix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpdfix.a; path = RApp/libpdfix.a; sourceTree = "<group>"; };
+		1AD3F57A251A2049008F8ACF /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../pdfix/libs/openssl/darwin/x86_64/lib/libcrypto.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8C6210252357AA0042CEF4 /* libpdfix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +51,7 @@
 			children = (
 				1A7ED417251A159B00621779 /* RApp */,
 				1A7ED416251A159B00621779 /* Products */,
+				1A8B39AA251A19BD000E001D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +71,7 @@
 				1A7ED41B251A159B00621779 /* SceneDelegate.h */,
 				1A7ED41C251A159B00621779 /* SceneDelegate.m */,
 				1A7ED41E251A159B00621779 /* ViewController.h */,
-				1A7ED41F251A159B00621779 /* ViewController.m */,
+				1A7ED41F251A159B00621779 /* ViewController.mm */,
 				1A7ED421251A159B00621779 /* Main.storyboard */,
 				1A7ED424251A159B00621779 /* Assets.xcassets */,
 				1A7ED426251A159B00621779 /* LaunchScreen.storyboard */,
@@ -74,6 +79,15 @@
 				1A7ED42A251A159B00621779 /* main.m */,
 			);
 			path = RApp;
+			sourceTree = "<group>";
+		};
+		1A8B39AA251A19BD000E001D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A8C620F252357AA0042CEF4 /* libpdfix.a */,
+				1AD3F57A251A2049008F8ACF /* libcrypto.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A7ED420251A159B00621779 /* ViewController.m in Sources */,
+				1A7ED420251A159B00621779 /* ViewController.mm in Sources */,
 				1A7ED41A251A159B00621779 /* AppDelegate.m in Sources */,
 				1A7ED42B251A159B00621779 /* main.m in Sources */,
 				1A7ED41D251A159B00621779 /* SceneDelegate.m in Sources */,
@@ -291,15 +305,41 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4796K4D74T;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					PDFIX_STATIC_LIB,
+					WASM_BUILD,
+					NO_DIGSIG,
+					WASM_BUILD,
+					NO_DIGSIG,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../pdfix/pdfix/include",
+					"$(PROJECT_DIR)/../pdfix/include/c++",
+				);
 				INFOPLIST_FILE = RApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../pdfix/bin",
+					"$(PROJECT_DIR)/../pdfix/libs/openssl/darwin/ios/lib",
+					"$(PROJECT_DIR)/../pdfix/libs/openssl/ios/arm64/lib",
+					"$(PROJECT_DIR)/RApp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pdfix.RApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,15 +349,37 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4796K4D74T;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PDFIX_STATIC_LIB,
+					NO_DIGSIG,
+					WASM_BUILD,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../pdfix/pdfix/include",
+					"$(PROJECT_DIR)/../pdfix/include/c++",
+				);
 				INFOPLIST_FILE = RApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../pdfix/bin",
+					"$(PROJECT_DIR)/../pdfix/libs/openssl/darwin/ios/lib",
+					"$(PROJECT_DIR)/../pdfix/libs/openssl/ios/arm64/lib",
+					"$(PROJECT_DIR)/RApp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = pdfix.RApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
