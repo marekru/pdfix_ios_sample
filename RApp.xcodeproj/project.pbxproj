@@ -31,7 +31,6 @@
 		1A7ED429251A159B00621779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7ED42A251A159B00621779 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A8C620F252357AA0042CEF4 /* libpdfix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpdfix.a; path = RApp/libpdfix.a; sourceTree = "<group>"; };
-		1AD3F57A251A2049008F8ACF /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../pdfix/libs/openssl/darwin/x86_64/lib/libcrypto.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				1A8C620F252357AA0042CEF4 /* libpdfix.a */,
-				1AD3F57A251A2049008F8ACF /* libcrypto.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,16 +311,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					PDFIX_STATIC_LIB,
-					WASM_BUILD,
-					NO_DIGSIG,
-					WASM_BUILD,
-					NO_DIGSIG,
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../pdfix/pdfix/include",
-					"$(PROJECT_DIR)/../pdfix/include/c++",
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Rapp";
 				INFOPLIST_FILE = RApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,9 +322,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/../pdfix/bin",
-					"$(PROJECT_DIR)/../pdfix/libs/openssl/darwin/ios/lib",
-					"$(PROJECT_DIR)/../pdfix/libs/openssl/ios/arm64/lib",
 					"$(PROJECT_DIR)/RApp",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pdfix.RApp;
@@ -354,15 +341,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4796K4D74T;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					PDFIX_STATIC_LIB,
-					NO_DIGSIG,
-					WASM_BUILD,
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../pdfix/pdfix/include",
-					"$(PROJECT_DIR)/../pdfix/include/c++",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Rapp";
 				INFOPLIST_FILE = RApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -372,9 +352,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/../pdfix/bin",
-					"$(PROJECT_DIR)/../pdfix/libs/openssl/darwin/ios/lib",
-					"$(PROJECT_DIR)/../pdfix/libs/openssl/ios/arm64/lib",
 					"$(PROJECT_DIR)/RApp",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pdfix.RApp;
